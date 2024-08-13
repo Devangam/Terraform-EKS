@@ -66,3 +66,10 @@ aws eks update-kubeconfig --name AWS-EKS --region ap-south-1
 ```
 
 ### Step-12: Play around with EKS and make sure , afterwards to run 'terraform destroy --auto-approve' to delete the reosurces
+Install kubectl and run the above command
+This will create kube config file and connect to our created EKS cluster.
+After connecting created EKS instance to check the kube config file  cd /home/ubuntu/.kube/ and cat config
+Now create deployment file (for yaml file refer 10 Microservices repo)
+vi micro.yml
+kubectl apply -f micro.yml
+kubectl get all
